@@ -29,7 +29,7 @@ If you get something like " git version 2.43.0 ..." you're good to proceed! If t
 Open your terminal/command line, and navigate to the directory you want to put the lab repository. Now, type the following:
 
 ```bash
-  git clone https://github.umn.edu/CSCI-1933/CSCI-1933-Student-Code.git
+  git clone https://github.com/CSCI1933/CSCI-1933-Student-Code.git
 ```
 
 
