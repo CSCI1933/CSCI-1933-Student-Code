@@ -7,10 +7,10 @@ It helps to understand *why* some of the syntax rules exist. In this homework yo
 ### Associated zyBooks Reading
 - 1.5 Control flow
 
-## 1. The Task
-Your task is to write a Java method called `countdown` prints a countdown to the terminal.
+## The Task
+Your task will be to write a Java method called `countdown` that prints a countdown to the terminal. We will walk through the thought process and syntax of this method in this README.
 
-A method is a block of code that can be called by other code. Note that a "method" is nearly identical to the concept of a "function", with the only difference between these two terms being that a method is a function that inside of a Class. Recall that all Java code *must* be inside of a class, which means all functions in Java are actually called methods. 
+A method is a block of code that can be called by other code. Note that a "method" is nearly identical to the concept of a "function", with the only difference between these two terms being that a method is a function inside of a class. Recall that all Java code *must* be inside of a class, which means all functions in Java are methods. 
 
 Methods can take in arguments to change their behavior. In this case, your `countdown` method will take in an integer that tells the method where to start the countdown.
 
@@ -42,7 +42,9 @@ Prints:
 Returns:
 `7 + 6 + 5 + 4 + 3 + 2 + 1 = 28`
 
-## 2. Method Signature
+Now that you understand our goal with this method, let’s start writing it!
+
+## Method Signature
 Create a new file called `Program.java`. Remember that your code needs to be placed inside of a class with the same name as the file, so start by adding this class definition:
 ```Java
 public class Program {
@@ -58,7 +60,7 @@ public static boolean isEnglish(String word) {
 }
 ```
 Let's take a look at the components of this method signature!
-- `public`: this is called the **access modifier** which parts of your program can use this method. Your `countdown` method should also be `public`
+- `public`: this is called the **access modifier** which defines which parts of your program can use this method. Your `countdown` method should also be `public`
 - `static`: this indicates that the method belongs to the Class instead of instances of the class. We will talk about this more as the course goes on, but your `countdown` method should also be `static`.
 - `boolean`: this tells Java the data type that this method will return. Consider, what data type do we want `countdown` to return?
 - `isEnglish`: this is the name that the programmer has chosen to give the method. It is good style to choose a name that logically describes the purpose of the method.
@@ -72,8 +74,8 @@ public static ??? countdown(??? ???){
 }
 ```
 
-## 3. Method Logic
-Now we can add the actual logic inside of the `countdown` method!
+## Method Logic
+Now we can add the actual logic inside the `countdown` method!
 
 #### Creating a Variable
 Since we want to eventually return the sum of all the numbers in the countdown, it makes sense to start by creating a variable that we will continuously add to.
@@ -89,9 +91,9 @@ Use this example to initialize your sum variable. What data type should it be? W
 Notice that there is a semicolon `;` at the end of the line. Since Java doesn't care about whitespace, the semicolon is used to tell Java where the end of each instruction is. This means there will typically need to be a semicolon at the end of every line of code except for when a new code block is being defined.
 
 #### Looping
-It makes sense to use a loop structure since we are trying to repeatedly preform an action, that being printing out a number.
+Since we are trying to repeatedly perform an action (printing a number), it makes sense to use a loop structure.
 
-For Loops in Java are made up of three statements. The first statement can set up a variable to use in the loop, the second tells the loop when to keep running, and the third tells the loop what to change at the end of each iteration.
+For Loops in Java are made up of three statements. The first statement setsup a variable to use in the loop, the second tells the loop when to keep running, and the third tells the loop what to change at the end of each iteration.
 
 This is an example of a loop that iterates from 0 to 9:
 
@@ -116,16 +118,16 @@ for (int i = ???; ???; ???){
 ```
 
 #### Loop Instructions
-You should place two statements inside of your for loop. First, we need to print out the current number in the countdown. Remember the syntax for printing in Java is `System.out.println(printThis)`.
+You should place two statements inside your for loop. First, we need to print out the current number in the countdown. Remember the syntax for printing in Java is `System.out.println(printThis)`.
 
-We should also add to the sum variable that we created earlier. Add another line inside of your for loop to add the current value to your sum.
+We should also add to the sum variable that we created earlier. Add another line inside your for loop to add the current value to your sum.
 #### Returning
 Don't forget to `return` the sum variable at the end of the method. Which variable do we want to return? Do we want to return inside or outside of the for loop?
 
-## 3. Testing your Code
+## Testing your Code
 We can add a `main` method to our `Program` class to test out our `countdown` method.
 
-Add this code inside of the `Program` class (meaning it should be inside of the outer-most curly brackets). Convention is to place the main method at the bottom of a class definition, so it should be underneath your `countdown` method definition.
+Add this code inside the `Program` class (meaning it should be inside the outer-most curly brackets). The main method is conventionally placed at the very bottom of a class, so it should be underneath your `countdown` method definition.
 
 ```Java
 public static void main(String[] args){
@@ -141,3 +143,4 @@ Try changing the argument that gets passed in to `countdown`, and ensure the out
 Go to the Homework 1 submission on Gradescope, and add `Program.java` to the submission.
 
 Gradescope will run the autograder and show you your score. If any of the tests don't pass, read the error messages which indicate what went wrong, update your code to fix the issues, and resubmit to Gradescope as many times as you want before the due date.
+
