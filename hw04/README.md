@@ -91,6 +91,7 @@ public static void main(String[] args){
 ```
 
 We expect to see the Selection Sort go through these steps:
+
 0. `[31, 4, 1, 5, 92, 65]`: This is the starting state.
 1. `[1, 4, 31, 5, 92, 65]` : `31` and `1` swapped places, so the smallest element `1` could be moved to the left-most side of the array. We can think of `[1]` as being its own fully sorted segment, while `[4, 31, 5, 92, 65]` is still unsorted.
 2. `[1, 4, 31, 5, 92, 65]` : Nothing changed in this step! That is because the smallest element remaining was `4`, which was already the element in the location. A swap did technically occur, the algorithm just swapped the element with itself. Now `[1,4]` is a fully sorted segment.
@@ -137,6 +138,7 @@ System.out.println("INSERTION SORT RESULT: " + arrayString(insertionData));
 ```
 
 We expect to see the Insertion Sort go through these steps:
+
 0. `[31, 4, 1, 5, 92, 65]`: This is the starting state. `[31]` is considered to be the sorted subarray.
 1. `[4, 31, 1, 5, 92, 65]`: `4` was the current element. It should go before `31` in the subarray, so `31` was shifted to the right and `4` was placed in index `0`. The sorted subarray is now `[4, 31]`.
 2. `[1, 4, 31, 5, 92, 65]`: `1` was the current element. It is less than both `4` and `31` so they were both shifted to the right and `1` was placed in index `0`. The sorted subarray is now `[1, 4, 31]`.
@@ -180,6 +182,7 @@ System.out.println("BUBBLE SORT RESULT: " + arrayString(bubbleData));
 ```
 
 We expect to see the Insertion Sort go through these steps:
+
 0. `[31, 4, 1, 5, 92, 65]`: This is the starting state. No elements have bubbled up.
 1. `[4, 31, 1, 5, 92, 65]`: It considers the pair `31, 4`, and swaps them to put them in order.
 2. `[4, 1, 31, 5, 92, 65]`: It considers the pair `31, 1`, and swaps them to put them in order.
