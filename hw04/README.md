@@ -14,43 +14,43 @@ Create a file called `Sorting.java` that defines a `Sorting` class.
 Each of these sorting algorithms works by swapping and moving elements in slightly different ways. To observe these differences, we will create helper methods to print out the state of the array after modifying it!
 
 ```Java
-private static String arrayString(int[] arr){
+private static String arrayString(int[] arr){  
     // DO NOT MODIFY  
-    String outputString = "[";
-    for (int i=0; i<arr.length; i++){
-        outputString += arr[i];
-        if (i<arr.length-1){
-            outputString += ", ";
-        }
-    }
-    outputString += "]";
-    return outputString;
-}
-
-private static void swap(int[] arr, int idx1, int idx2){
+    String outputString = "[";  
+    for (int i=0; i<arr.length; i++){  
+        outputString += arr[i];  
+        if (i<arr.length-1){  
+            outputString += ", ";  
+        }  
+    }  
+    outputString += "]";  
+    return outputString;  
+}  
+  
+private static void swap(int[] arr, int idx1, int idx2){  
     // DO NOT MODIFY  
-
-    String pair = arr[idx1] + " <-> " + arr[idx2];
-    String indices = "(index " + idx1 + " <-> " + idx2 + ")";
-
+  
+    String pair = arr[idx1] + " <-> " + arr[idx2];  
+    String indices = "(index " + idx1 + " <-> " + idx2 + ")";  
+  
     // Swap the elements  
-    int temp = arr[idx1];
-    arr[idx1] = arr[idx2];
-    arr[idx2] = temp;
-
+    int temp = arr[idx1];  
+    arr[idx1] = arr[idx2];  
+    arr[idx2] = temp;  
+  
     // This print might look strange, but it is just using a different print method to format the output in a more readable way.  
-    System.out.printf("%-12s %-20s %s%n", pair, indices, arrayString(arr));
+    System.out.printf("%-12s %-20s %s%n", pair, indices, arrayString(arr));  
 }
 
-private static void place(int[] arr, int val, int idx){
+private static void place(int[] arr, int val, int idx){  
     // DO NOT MODIFY  
-    String placement = val + " to index " + idx;
-
+    String placement = val + " to index " + idx;  
+  
     // Place the element  
-    arr[idx] = val;
-
+    arr[idx] = val;  
+  
     // This print might look strange, but it is just using a different kind of print method to format the output a little nicer.  
-    System.out.printf("%-12s %s%n", placement, arrayString(arr));
+    System.out.printf("%-12s %s%n", placement, arrayString(arr));  
 }
 ```
 
@@ -68,9 +68,9 @@ Add this method signature to your file. It will take in an unsorted array and so
 
 ```Java
 public static void selectionSort(int[] arr) {
-    // 1. Outer loop picks spots in the array one by one
-    // 2. Inner loop finds the smallest element in the rest of the array
-    // 3. Swap the outer loop's spot with the smallest element
+	// 1. Outer loop picks spots in the array one by one
+	// 2. Inner loop finds the smallest element in the rest of the array
+	// 3. Swap the outer loop's spot with the smallest element
 }
 ```
 
@@ -84,9 +84,9 @@ You can test your algorithm by adding this main method:
 
 ```Java
 public static void main(String[] args){
-    int[] selectionData = [31, 4, 1, 5, 92, 65]
-    selectionSort(selection_data);
-    System.out.println("SELECTION SORT RESULT: " + arrayString(selectionData));
+	int[] selectionData = {31, 4, 1, 5, 92, 65};
+	selectionSort(selectionData);
+	System.out.println("SELECTION SORT RESULT: " + arrayString(selectionData));
 }
 ```
 
@@ -99,7 +99,7 @@ We expect to see the Selection Sort go through these steps:
 5. `[1, 4, 5, 31, 65, 92]` : The last two elements were swapped. The sorted segment is now `[1, 4, 5, 31, 65]`. But since there is only one unsorted element `92`, and this is guaranteed to be greater than the sorted subarray, this step has actually implicitly placed the final element in its proper location. The array is fully sorted!
 
 ## 2. Insertion Sort
-The Insertion Sort algorithm is often compared to manually sorting a deck of cards, .
+The Insertion Sort algorithm is often compared to manually sorting a deck of cards, . 
 
 It builds a sorted subarray from left to right. Whenever the algorithm processes a new element, it will assume everything to the left of it is in sorted order. It compares the element to each value in the subarray to move it into its proper sorted position within the subarray.
 
@@ -131,7 +131,7 @@ Once this while loop exits, we know that `j` has landed on the first element tha
 Test your algorithm by adding this to the bottom of your main method:
 
 ```Java
-int[] insertionData = [31, 4, 1, 5, 92, 65]
+int[] insertionData = {31, 4, 1, 5, 92, 65};
 insertionSort(insertionData);
 System.out.println("INSERTION SORT RESULT: " + arrayString(insertionData));
 ```
@@ -145,11 +145,11 @@ We expect to see the Insertion Sort go through these steps:
 5. `[1, 4, 5, 31, 65, 92]`: `65` was the current element. `92` was shifted to the right and `65` was placed in index `4`. The sorted subarray is now `[1, 4, 5, 31, 65, 92]`, which is the entire array, so the algorithm is complete.
 
 ## 3. Bubble Sort
-The Bubble Sort algorithm works by stepping forward in the array and continually comparing neighboring elements, swapping them if they are out of order.
+The Bubble Sort algorithm works by stepping forward in the array and continually comparing neighboring elements, swapping them if they are out of order. 
 
-It starts by comparing the first and second element, and swaps them if the first was bigger than the second. Then it steps forward to do the same with the second and third elements, then third and fourth, etc.
+It starts by comparing the first and second element, and swaps them if the first was bigger than the second. Then it steps forward to do the same with the second and third elements, then third and fourth, etc. 
 
-Notice if you continue this pattern for the entire length of the array, it is guaranteed that the largest element in the array will continually be swapped to the right until it is in the rightmost position. This process is repeated for the second largest element, and so on until the array is sorted. This is where the algorithm gets its name-- because the large elements "bubble" up to the top.
+Notice if you continue this pattern for the entire length of the array, it is guaranteed that the largest element in the array will continually be swapped to the right until it is in the rightmost position. This process is repeated for the second largest element, and so on until the array is sorted. This is where the algorithm gets its name-- because the large elements "bubble" up to the top. 
 
 **After each pass through the array, the rightmost segment of the array holds the largest elements in their final sorted order.**
 
@@ -157,9 +157,9 @@ Add this method signature to your file.
 
 ```Java
 public static void bubbleSort(int[] arr) {
-    // 1. Outer loop tracks the number of passes through the array
-    // 2. Inner loop goes through the array comparing adjacent elements
-    // 3. A pair of adjacent elements is swapped if they are out of order, meaning the left element is greater than the right element
+	// 1. Outer loop tracks the number of passes through the array
+	// 2. Inner loop goes through the array comparing adjacent elements
+	// 3. A pair of adjacent elements is swapped if they are out of order, meaning the left element is greater than the right element
 }
 ```
 
@@ -174,8 +174,8 @@ Within this inner loop, we need to swap the elements in indices `j` and `j-1` if
 Test your algorithm by adding this to the bottom of your main method:
 
 ```Java
-int[] bubbleData = [31, 4, 1, 5, 92, 65]
-insertionSort(bubbleData);
+int[] bubbleData = {31, 4, 1, 5, 92, 65};
+bubbleSort(bubbleData);
 System.out.println("BUBBLE SORT RESULT: " + arrayString(bubbleData));
 ```
 
