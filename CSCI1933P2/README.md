@@ -126,8 +126,6 @@ Chess is a centuries-old game of logic and skill originating from India. The gam
 
 Chess is a game of many rules, but we have reduced it slightly to a set of rules which we think you can implement. We will discuss the specific rules that must be followed in section 3. Unless a rule is specifically mentioned in this writeup, assume that you need not implement it.
 
-#### Note: If you are unfamiliar with Chess, there is a <a href="https://github.umn.edu/CSCI-1933/project02#chess-rules">SECTION</a> at the bottom of this document that contains a brief overview of Chess basics.
-
 # Project Structure
 
 This section outlines the overall structure of the chess app you will be writing.
@@ -202,7 +200,7 @@ The `Piece` abstract class also contains some instance variables that relate to 
 `Game.java` is the class which contains this project’s `main` method. Within this `main` method you must create an interactive terminal experience for the players to interact with throughout the game. This class will instantiate the `Board` object and prompt the user for input. A visual representation of the board must be printed at the beginning of each player’s turn (Hint: use the `Board` class's `toString()` or `display()` methods). The user should enter a starting point and an ending point for a piece of their color. For example, when it’s **white’s turn**, only **white pieces** can move. All other work to execute the user’s turn should happen elsewhere. The game should end when one player’s King has been "captured".
 
 ### As a sample of what a turn could look like, consider this position which begins in the final state of the famous "Immortal Game" and, in this case, ends when the white bishop captures the opponents King.
-<img src="/images/example.png" alt="An example of this project's user interface.">
+<img src="./images/example.png" alt="An example of this project's user interface.">
 
 ## FEN.java
 We have supplied you with a class called `Fen.java` which is a tool for both setting the board to its starting state, and testing your work. It is based on Forsyth-Edwards Notation which is a method for saving the position of every piece on a chess board in 71 characters or less (usually much less). Understanding the way it works isn’t critical for the project, but you can read more about it <a href="https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation">HERE</a>.
@@ -239,8 +237,6 @@ The `promotePawn` method should verify that the `Pawn` object is at the end of i
     * **Input:** The state of the board, the destination row of the move, and the destination column of the move.
     * **Output:** Whether the piece can move from its current location to the destination provided, given the current board state.
 
-
-#### IMPORTANT: Please look at the <a href="https://github.umn.edu/CSCI-1933/project02#chess-rules">RULES</a> document for more information on how to implement certain pieces, especially the pawn with its pawn promotion. The rules document can be found at the bottom of this file.
 
 #### Note: In general, `isMoveLegal` functions for the chess piece classes, i.e Queen, Rook, Bishop or etc, should use `Board.java`’s `verifySourceAndDestination()` and any respective movement verification, i.e `verifyVertical()`, `verifyHorizontal()`, `verifyDiagonal`, etc. Although `Pawn.java` offers some good insight to the project in general, it shouldn’t necessarily be the basis for other chess piece class implementations.
 
@@ -340,7 +336,7 @@ For the following piece sections we will be using the notation (row, column) ins
 
 The starting position of the game should look like the following diagram. The movement of each piece will be described in further detail later in this writeup. Remember that the provided `Fen` class will be useful for setting up the board to a specific state.
 
-<img src="/images/starting_position.png" alt="Image of the starting position in Chess.">
+<img src="./images/starting_position.png" alt="Image of the starting position in Chess.">
 
 ## Pawn
 The Pawn is the most simple piece on the board. It can move only one position at a time, and
@@ -356,8 +352,8 @@ Below are some examples of the rook’s movement. Note that the rook is on locat
 
 Not pictured in the diagram is that it would be legal for the rook to “capture” the black pawn on location (4, 3), but it would not be legal for the rook to move to the white pawn at location (2, 6).
 
-<img src="/images/rook_obstructed.png" alt="Rook Diagram 1.">
-<img src="/images/rook_unobstructed.png" alt="Rook Diagram 2.">
+<img src="./images/rook_obstructed.png" alt="Rook Diagram 1.">
+<img src="./images/rook_unobstructed.png" alt="Rook Diagram 2.">
 
 ## Bishop
 
@@ -367,8 +363,8 @@ Below are some examples of the bishop’s movement. Note that the bishop is on l
 
 Not pictured in the diagram is that it would be legal for the bishop to “capture” the black pawn on location (4, 5), but it would not be legal for the bishop to move to the white pawn at location (4, 1).
 
-<img src="/images/bishop_obstructed.png" alt="Bishop Diagram 1.">
-<img src="/images/bishop_unobstructed.png" alt="Bishop Diagram 2.">
+<img src="./images/bishop_obstructed.png" alt="Bishop Diagram 1.">
+<img src="./images/bishop_unobstructed.png" alt="Bishop Diagram 2.">
 
 ## Knight
 The Knight is a bit of a wildcard compared to the other pieces in chess. All of the other pieces move linearly, but the knight moves in what is often referred to as an “L” shape. This means that it **moves 2 squares out (either horizontally or vertically)** from its place, and then **1 additional square out perpendicular to the direction of the first movement**. **The knight is also the only piece which can skip over another piece.** This means it may move to a new position even if there is another piece blocking the direct path. 
@@ -377,8 +373,8 @@ Below are some examples of the knight’s movement. Note that the knight is on l
 
 Not pictured in the diagram is that it would be legal for the knight to “capture” any piece of the opponent’s color **iff** it is in the position the knight is moving to. The knight may not move to a position which has a friendly piece.
 
-<img src="/images/knight_obstructed.png" alt="Knight Diagram 1.">
-<img src="/images/knight_unobstructed.png" alt="Knight Diagram 2.">
+<img src="./images/knight_obstructed.png" alt="Knight Diagram 1.">
+<img src="./images/knight_unobstructed.png" alt="Knight Diagram 2.">
 
 ## Queen
 The Queen is the most powerful piece on the board, as it can move **any distance in any direction.** Unlike the knight, it can only move provided its path is not blocked by another piece.
@@ -387,8 +383,8 @@ Below are some examples of the queen’s movement. Note that the queen is on loc
 
 Not pictured in the diagram is that it would be legal for the queen to “capture” the black pawns at locations (1, 3) & (4, 3), but it would not be legal for the queen to move to the white pawns at locations (2, 6) & (4, 1).
 
-<img src="/images/queen_obstructed.png" alt="Queen Diagram 1.">
-<img src="/images/queen_unobstructed.png" alt="Queen Diagram 2.">
+<img src="./images/queen_obstructed.png" alt="Queen Diagram 1.">
+<img src="./images/queen_unobstructed.png" alt="Queen Diagram 2.">
 
 ## King
 The King is not a particularly powerful piece, but is arguably the most important. Like the queen, it may move in any direction. Unlike the queen, it may only move one position away from where it stands. This is the only requirement we are enforcing for the king’s movement. However, if player’s king is “captured” they lose the game. You must also implement this feature.
@@ -397,8 +393,8 @@ Below are some examples of the king’s movement. Note that the king is on locat
 
 Not pictured in the diagram is that it would be legal for the king to “capture” the black pawns at locations (1, 3) & (2, 2) & (3, 4), but it would not be legal for the king to move to the white pawn at location (1, 2).
 
-<img src="/images/king_obstructed.png" alt="King Diagram 1.">
-<img src="/images/king_unobstructed.png" alt="King Diagram 2.">
+<img src="./images/king_obstructed.png" alt="King Diagram 1.">
+<img src="./images/king_unobstructed.png" alt="King Diagram 2.">
 
 # Acknowledgements
 
