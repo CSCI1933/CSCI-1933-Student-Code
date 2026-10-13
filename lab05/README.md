@@ -61,7 +61,7 @@ Handily enough, our Book class comes with a special `compareTo()` method. You’
 Take a look at the Book class. There are two `compareTo()` methods provided for Book:
 
 - `public int compareTo(Book other)` — This compares two books based on the title.
-- `public int compareTo(Book other, char compareBy)` — If the compareBy character is 'a', it will compare the books based on the author. If the compareBy character is 't', it will compare the books based on the rating. Finally, if the compareBy character is 'r', it will compare the books based on the author.
+- `public int compareTo(Book other, char compareBy)` — If the compareBy character is 'a', it will compare the books based on the author. If the compareBy character is 't', it will compare the books based on the title. Finally, if the compareBy character is 'r', it will compare the books based on the rating.
 
 Implement this method in your Bookshelf class:
 
