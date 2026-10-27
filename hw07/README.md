@@ -1,4 +1,4 @@
-# 1933 Homework 6: Headed Linked Lists
+# 1933 Homework 7: Headed Linked Lists
 In the last assignment, you implemented `add` and `delete` methods for a Linked List. You may recall that we needed to write special cases for when the list was empty-- otherwise, we would start our traversal on `head` which is `null`, leading to our code attempting to call methods on a null pointer, which throws the infamous `NullPointerException`!
 
 A common way to avoid this exception without needing to write special cases in many of our methods is to use a Headed Linked List. This is a special kind of Linked List that keeps a "Sentinel" or "Dummy" node at the front of the list at all times. This doesn't represent actual data, but is kept there to ensure the head is never null.
@@ -84,6 +84,6 @@ Our goal here is to insert a new node between `current` and `current.getNext()`.
 
 If `nextIndex` is not equal to `index`, the loop must have exited because we ran out of nodes before reaching `index`, meaning the argument was out of bounds! In this case, we can simply return `false`.
 ## Submission
-Go to the Homework 6 submission on Gradescope, and add `HeadedLinkedList.java` to the submission.
+Go to the Homework 7 submission on Gradescope, and add `HeadedLinkedList.java` to the submission.
 
 Gradescope will run the autograder and show you your score. If any of the tests don't pass, read the error messages, which indicate what went wrong, update your code to fix the issues, and resubmit to Gradescope as many times as you want before the due date.
