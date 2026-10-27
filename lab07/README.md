@@ -40,7 +40,7 @@ Implement the following three classes as children of the Vehicle class. For each
 
 Make each moving method print \<class type\> moving <direction\>, where \<class type\> is the name of the class and \<direction\> is either Forward or Backward.
 
-- `public class Car extends Vehicle` — Have a constructor that takes in one argument, `int mpg`, which represents a Car's MPG. Also add a default constructor that sets `mpg` to 30.0. `getMPG()` should just return `mpg`.
+- `public class Car extends Vehicle` — Have a constructor that takes in one argument, `double mpg`, which represents a Car's MPG. Also add a default constructor that sets `mpg` to 30.0. `getMPG()` should just return `mpg`.
 - `public class Helicopter extends Vehicle` — Implement the constructors and `getMPG()` as you did in the Car class, but with a default MPG of 0.3. After implementing the abstract methods, create two new ones:
 
   - `public void movingUp()` — Prints out "Helicopter moving up".
