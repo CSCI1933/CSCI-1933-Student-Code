@@ -10,7 +10,7 @@ A Linked List is a linear ordering of linked nodes. By modifying references, nod
 In this assignment we will create the most basic operations of a Linked List!
 ### Associated zyBooks Reading
 - 3.6 Singly linked lists
-## 1. Node Class
+## Node Class
 Before we can start thinking about making the Linked List, we need to start by making Nodes! Create a new file called `Node.java` that defines a `Node` class.
 
 When it comes to the nodes of a Linked List, we need two instance variables:
@@ -23,15 +23,25 @@ Add the following methods:
 - `Node getNext()`, a getter for `next`
 - `void setNext()`, a setter for `next`
 
-## 2. Linked List Structure
-Now we're ready to create the actual Linked List data structure. In the same folder, create a new file called `LinkedList.java` that defines a `LinkedList` class.
+## Linked List Structure
+Now we're ready to create the actual Linked List data structure. We have provided an Interface called `ILinkedList.java`, which declares the methods that you'll need to add into your Linked List implementation. Interfaces are special files that list methods that *must* be included in any implementation of the interface.
+
+In the same folder, create a new file called `LinkedList.java` that defines a `LinkedList` class. To make this file implement the interface, add the following class definition:
+```Java
+public class LinkedList implements ILinkedList {
+
+}
+```
+
+This syntax acts as a sort of "contract", saying that we must complete the interface's methods in order to compile. We will create two methods in this assignment:
+- `add(int data)` will add `data` to the end of the sequence
+- `delete(int data)` will delete the first occurrence of `data`
+
+Now we can start writing the LinkedList class!
 
 The links between the nodes already do most of the work for the structure of a Linked List, so there is only one thing that the Linked List object itself needs to keep track of-- the start of the sequence. Let's create a `Node` instance variable called `head`. This will act like our entry point into the list. You can initialize this variable to `null` because the list starts off empty.
 
-We will create two methods in this assignment:
-- `add(int data)` will add `data` to the end of the sequence
-- `delete(int data)` will delete the first occurrence of `data`
-## 3. Adding to the End
+## Adding to the End
 Add the following method signature to `LinkedList.java`:
 ```Java
 public void add(int data){
@@ -91,7 +101,7 @@ public String toString(){
 
 This will allow you to see the state of the linked list. Create your own `main` method that tests the `add` method to verify its correctness.
 
-## 4. Deleting from the Middle
+## Deleting from the Middle
 Now let's see how Linked Lists really shine by modifying the list in the middle! This method will delete the first occurrence of `data` from the list. It returns a `boolean` that indicates whether an element was indeed deleted. If `data` doesn't appear in the list, nothing should change, and the method returns `false`.
 
 
@@ -142,5 +152,3 @@ Write your own test cases in your `main` method to check the correctness of your
 Go to the Homework 5 submission on Gradescope, and add `LinkedList.java`  and `Node.java` to the submission.
 
 Gradescope will run the autograder and show you your score. If any of the tests don't pass, read the error messages which indicate what went wrong, update your code to fix the issues, and resubmit to Gradescope as many times as you want before the due date.
-
-
