@@ -14,11 +14,11 @@ public class SparseVector {
         String result = "";
         Node currNode = head;
         int currIndex = 0;
-        while( currNode != null ){
+        while(currNode != null){
             int idx = currNode.getIndex();
 
             // Pad the space between nodes with zero
-            while( currIndex < idx ){
+            while(currIndex < idx){
                 result += "0, ";
                 currIndex++;
             }
@@ -28,12 +28,22 @@ public class SparseVector {
             currIndex++;
 
             // Only add a comma if this isn't the last element
-            if(currNode != null) {
+            if(currIndex < length) {
                 result += ", ";
             }
         }
+        // Loop to handle the zeroes after the last node
+        while (currIndex < length) {
+            result += "0";
+            // Only add a comma if this isn't the last element
+            if(currIndex < length - 1) {
+                result += ", ";
+            }
+            currIndex++;
+        }
         return result;
     }
+
 
     // TODO: Implement me for milestone 2
     public void addElement(int index, double value) {
