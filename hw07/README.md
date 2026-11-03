@@ -76,7 +76,7 @@ Next, we can set up our traversal. We want to traverse until we're on the node r
 
 Now we can set up the while loop that will drive the traversal. The loop should end if we have reached `index` because that means we are ready to add the element, *or* if we run out of nodes, which means there weren't enough nodes to count up to `index`-- in other words, `index` was out of bounds.
 
-So our while loop should continue as long as `nextIndex` is less than or equal to `index` *and* `current` is not `null`. We should move both `current` and `nextIndex` forward within the loop.
+So our while loop should continue as long as `nextIndex` is less than `index` *and* `current` is not `null`. We should move both `current` and `nextIndex` forward within the loop.
 
 Once the loop ends, we know that one of the ending conditions has been met, so we need to figure out which one! Write an if statement that checks if `nextIndex` is equal to `index`. If so, we have found the proper location to add the new node. 
 
