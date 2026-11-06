@@ -136,7 +136,7 @@ You will then compare the time complexities of a select few list methods when im
 
 * `void exclusiveOr(List<T> otherList)`
 
-* `void rotate()`
+* `boolean rotate()`
 
 * `T getMin()`
 
