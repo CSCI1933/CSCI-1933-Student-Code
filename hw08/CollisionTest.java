@@ -66,16 +66,21 @@ public class CollisionTest {
                             totalNodes, filledCells, collisionPerc, longestChain, longestChainIdx);
     }
 
-    public static HashTable csvToHashTable(String fileName) throws FileNotFoundException {
+public static HashTable csvToHashTable(String fileName) {
         HashTable ht = new HashTable(1000);
         File f = new File(fileName);
-        Scanner s = new Scanner(f);
-        while(s.hasNextLine()){
-            String str = s.nextLine();
-            String[] args = str.split(",");
-            ht.add(args[0],args[1]);
+        try {
+            Scanner s = new Scanner(f);
+            while(s.hasNextLine()){
+                String str = s.nextLine();
+                String[] args = str.split(",");
+                ht.add(args[0],args[1]);
+            }
+            s.close();
+            return ht;
+        } catch (FileNotFoundException e){
+            System.out.println(fileName + " not found");
+            return null;
         }
-        s.close();
-        return ht;
     }
 }
