@@ -119,14 +119,9 @@ Remember that one of the Gradescope tests will be based on how well your hash fu
 
 You can test your collision rate locally by adding these lines to your `main` method. It will call helper methods in the `CollisionTest.java` file that we have provided.
 ```Java
-	try {  
-	    HashTable ht = CollisionTest.csvToHashTable("USCities.csv");  
-	    System.out.println(ht);     // Prints out the Hash Table's toString. Remove this line to unclutter the output.  
-	    System.out.println(CollisionTest.collisionReport(ht));  
-	}  
-	catch (FileNotFoundException e){  
-	    System.out.println(e);  
-	}
+	HashTable ht = CollisionTest.csvToHashTable("USCities.csv");  
+	System.out.println(ht);     // Prints out the Hash Table's toString. Remove this line to unclutter the output.  
+	System.out.println(CollisionTest.collisionReport(ht));  
 ```
 
 ## Submission
