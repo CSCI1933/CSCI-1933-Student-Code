@@ -37,7 +37,7 @@ public String toString(){
         sb.append(i+":\t");  
         PairNode curr = table[i];  
         while (curr != null){  
-            sb.append("(\"" + curr.getKey() + "\", \"" + curr.getVal() + "\") -> ");  
+            sb.append("(\"" + curr.getKey() + "\", \"" + curr.getValue() + "\") -> ");  
             curr = curr.getNext();  
         }  
         sb.append("null\n");  
