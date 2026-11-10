@@ -11,16 +11,16 @@ public class HashTable{
     }
 
     // TODO: Implement a simple hash function
-    public int hash(T item) {return -1;}
+    public int hash(String item) {return -1;}
         
     // TODO: Implement the contains method that checks if a hash table contains item
-    public boolean contains(T item) {return false;}
+    public boolean contains(String item) {return false;}
         
     // TODO: Adds items to the hash table without duplicates
-    public void add(T item) { }
+    public void add(String item) { }
 
     // TODO: Delete item if present
-    public boolean delete(T item) {
+    public boolean delete(String item) {
         return false;
     }
 
@@ -29,8 +29,7 @@ public class HashTable{
     
     }
 
-    // Adds all words from a given file to the hash table using the add(T item) method above
-    @SuppressWarnings("unchecked")
+    // Adds all words from a given file to the hash table using the add(String item) method above
     public void addWordsFromFile(String fileName) {
         Scanner fileScanner = null;
         String word;
@@ -44,7 +43,7 @@ public class HashTable{
         while (fileScanner.hasNext()) {
             word = fileScanner.next();
             word = word.replaceAll("\\p{Punct}", ""); // removes punctuation
-            this.add((T) word);
+            this.add(word);
         }
     }
 
