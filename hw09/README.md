@@ -57,7 +57,7 @@ Add this `toString` method to `ArrayStack.java`. It will only output the first `
 ```Java
 public String toString(){  
 	String outputString = "[";  
-	for (inxt i=0; i<numElements; i++){  
+	for (int i=0; i<numElements; i++){  
 		outputString += array[i];  
 		if (i<numElements-1){  
 			outputString += ", ";  
