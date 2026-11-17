@@ -128,6 +128,7 @@ try {
 ```
 
 - Since the tokens you are iterating through are Strings, the stack should be of Strings.
+- Use the default constructor when you initialize the stack, so it creates a stack with a capacity of 5.
 - When you're checking if the token is a number, a simple way could just be checking that the string is not equal to "+", "-", "*", or "/".
 - When you pop items on the stack and need to perform a mathematical operation on them, you must convert it from a String to a double. Recall, that you can use `Double.parseDouble(String s)`.
 - If you need to push something onto the stack, remember, it must be a String. If you are converting a double to a String, you can use `Double.toString(Double d)`.
