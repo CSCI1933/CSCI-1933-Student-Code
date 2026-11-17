@@ -1,5 +1,5 @@
 // CSCI 1933 Lab 10
-public class Stack<T extends Comparable> {
+public class Stack<T extends Comparable<T>> {
 
   public Stack() {}
 
