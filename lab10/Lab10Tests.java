@@ -39,7 +39,7 @@ public class Lab10Tests {
     @AfterClass
     public static void printScore() {
         System.out.println();
-        System.out.println("Lab 9 score: " + SCORING_TEST_RULE.getPoints() + " / " + SCORING_TEST_RULE.getTotal() + " points");
+        System.out.println("Lab 10 score: " + SCORING_TEST_RULE.getPoints() + " / " + SCORING_TEST_RULE.getTotal() + " points");
         if (SCORING_TEST_RULE.getPoints() == 5)
             System.out.println("\nYou are all done with lab!");
         else{
