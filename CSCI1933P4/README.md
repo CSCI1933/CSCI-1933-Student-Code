@@ -90,7 +90,7 @@ Open your terminal/command line, and navigate to the top of the `CSCI-1933-Stude
 ## Project Overview
 
 In this project you will be creating your own version of *Minesweeper* using stacks and queues. If you are unfamiliar with the game, it is recommended that you take a small amount of time to familiarize yourself with it. Here is the official Minesweeper
-website: <a href="https://minesweepergame.com/strategy/how-to-play-minesweeper.php">LINK</a>, and here is a link to play Minesweeper in your browser <a href="https://g.co/kgs/FuSn36P">LINK</a>.
+website: <a href="https://minesweepergame.com/strategy/how-to-play-minesweeper.php">LINK</a>.
 
 *Note: These websites should be used as a BRIEF overview of minesweeper. We will be implementing a slightly different version, therefore, some rules may vary.*
 
