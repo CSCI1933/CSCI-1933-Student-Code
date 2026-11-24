@@ -149,7 +149,7 @@ This grid with starting vertex (0, 0) returns **True**.
   \end{bmatrix}
 ```
 
-Implement the below pseudocode for `dfs()` and `dfs()` in ColorPath.java.
+Implement the below pseudocode for `dfs()` and `dfs()` in PathExists.java.
 
 It has the following methods:
 
